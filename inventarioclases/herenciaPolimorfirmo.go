@@ -1,4 +1,4 @@
-package main
+package inventarioclases
 
 import "fmt"
 
@@ -44,7 +44,7 @@ type PrintInfo interface {
 	getMessage() string
 }
 
-func main() {
+func herenciaPolimorfimo() {
 	ftEmployee := FullTimeEmployee{}
 	ftEmployee.name = "Juan"
 	ftEmployee.edad = 25
