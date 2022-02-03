@@ -14,3 +14,10 @@ func getValues(x int) (doble int, triple int, cuadruple int) {
 	cuadruple = 4 * x
 	return
 }
+
+func Fibonacci(n int) int {
+	if n <= 1 {
+		return n
+	}
+	return Fibonacci(n-1) + Fibonacci(n-2)
+}

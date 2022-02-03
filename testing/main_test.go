@@ -56,7 +56,26 @@ func TestGetValues(t *testing.T) {
 	}
 }
 
+func TestFibonacci(t *testing.T) {
+	tables := []struct {
+		a int
+		n int
+	}{
+		{1, 1},
+		{8, 21},
+		{50, 12586269025},
+	}
+	for _, item := range tables {
+		fib := Fibonacci(item.a)
+		if fib != item.n {
+			t.Errorf("Fobonacci was incorrect, got %d expected %d", fib, item.n)
+		}
+	}
+}
+
 // go test -cover = comando que nos indica cual es la cobertura de nuestro codigo
 // go test -coverprofile=coverage.out = nos genera un archivo con el indicador de cobertura
 // go tool cover -func=coverage.out /nos permite ver en la terminal de una forma mas diciente como esta la cobertura
 // go tool cover -html=coverage.out /nos permite ver en html la cobertura de codigo
+// go test -cpuprofile=cpu.out / genera un archivo que usaremos para valida el rendimiento de nuestro codigo
+// go tool pprof cpu.out / nos muestra un reporte del rendimiento del codigo
