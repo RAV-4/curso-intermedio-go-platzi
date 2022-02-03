@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main() {
+func mainFunctions() {
 	x := 5
 	//Funcion anonima
 	y := func() int {
