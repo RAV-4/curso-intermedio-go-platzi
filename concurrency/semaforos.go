@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func mainSem() {
 	c := make(chan int, 2)
 	var wg sync.WaitGroup
 	for i := 0; i < 10; i++ {
