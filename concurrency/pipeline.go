@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainPipeline() {
 	generator := make(chan int)
 	doubles := make(chan int)
 
